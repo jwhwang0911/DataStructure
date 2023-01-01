@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/star4/바탕화~1-DESKTOP-1LMMDHB-124520/Study_C++/01_Cbase_C++/Namespace/main.cpp
+namespace2.h
+/mnt/c/Users/star4/바탕화~1-DESKTOP-1LMMDHB-124520/Study_C++/01_Cbase_C++/Namespace/namespace2.h
+
+/mnt/c/Users/star4/바탕화~1-DESKTOP-1LMMDHB-124520/Study_C++/01_Cbase_C++/Namespace/namespace2.cpp
+namespace2.h
+/mnt/c/Users/star4/바탕화~1-DESKTOP-1LMMDHB-124520/Study_C++/01_Cbase_C++/Namespace/namespace2.h
+iostream
+-
+
+/mnt/c/Users/star4/바탕화~1-DESKTOP-1LMMDHB-124520/Study_C++/01_Cbase_C++/Namespace/namespace2.h
+
