@@ -4,33 +4,75 @@
 #include<queue>
 using namespace std;
 
-void dfs(int start, int n, int **graph) {
-    cout << "dfs start!" << endl;
+// void dfs(int start, int n, int **graph) {
+//     int temp;
+//     stack<int> dfs;
+//     dfs.push(start);
+//     bool *d_visit = new bool[n];
+//     for(int i = 0; i < n; i++) {
+//         d_visit[i] = false;
+//     }
 
-    stack<int> dfs;
-    dfs.push(start);
+//     int cnt = 1;
+
+//     while(!dfs.empty()) {
+//         temp = dfs.top();
+//         dfs.pop();
+//         if(!d_visit[temp-1]) {
+//             cout << temp << " ";
+//             d_visit[temp-1] = true;
+//         }
+
+//         for(int i = n-1; i >= 0; i--) {
+//             if(graph[temp-1][i] == 1 && !d_visit[i]) {
+//                 dfs.push(i+1);
+//             }
+//         }
+//     }
+
+//     cout << endl;
+// }
+
+void dfs(int start, int n, int **graph, bool *visit) {
+    cout << start << ' ';
+    if(visit[start-1]) {
+        return;
+    }
+    visit[start-1] = true;
+    for(int i = 0; i < n; i++) {
+        if(graph[start-1][i] == 1 && !visit[i] ) {
+            dfs(i+1, n, graph, visit);
+        }
+    }
+}
+
+void bfs(int start, int n, int **graph) {
+    int temp;
+    queue<int> bfs;
+    bfs.push(start);
     bool *d_visit = new bool[n];
     for(int i = 0; i < n; i++) {
         d_visit[i] = false;
     }
 
-    while(!dfs.empty()) {
-        int temp = dfs.top();
-        cout << temp;
-        dfs.pop();
+    int cnt = 1;
+
+    while(!bfs.empty()) {
+        temp = bfs.front();
+        bfs.pop();
         if(!d_visit[temp-1]) {
-            cout << temp;
+            cout << temp << " ";
             d_visit[temp-1] = true;
         }
 
-        for(int k = 0; k < n; k++) {
-            if(graph[temp-1][k] == 1) {
-                dfs.push(k);
+        for(int i = 0; i < n; i++) {
+            if(graph[temp-1][i] == 1 && !d_visit[i]) {
+                bfs.push(i+1);
             }
         }
-
-        sleep(2);
     }
+
+    cout << endl;
 }
 
 int main(void) {
@@ -50,18 +92,9 @@ int main(void) {
         arr[y-1][x-1] = 1;
     }
 
-    dfs(v,n,arr);
+    bool *visit = new bool[n];
 
-    // int *b_visit = new int*[n];
-    // queue<int> bfs;
-
-
-
-    for(int i = 0; i< n; i++) {
-        for(int j = 0; j< n; j++) {
-            cout << arr[i][j];
-        }
-        cout << endl;
-    }
-
+    dfs(v,n,arr , visit);
+    cout << endl;
+    bfs(v,n,arr);
 }
