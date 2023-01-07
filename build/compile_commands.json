@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/mnt/c/Users/황장원/Desktop/DataStructure/build",
+  "command": "/usr/bin/g++    -g   -o CMakeFiles/namespace.out.dir/main.cpp.o -c /mnt/c/Users/황장원/Desktop/DataStructure/Ch0_C++_Study/01_C_to_C++/Namespace/main.cpp",
+  "file": "/mnt/c/Users/황장원/Desktop/DataStructure/Ch0_C++_Study/01_C_to_C++/Namespace/main.cpp"
+},
+{
+  "directory": "/mnt/c/Users/황장원/Desktop/DataStructure/build",
+  "command": "/usr/bin/g++    -g   -o CMakeFiles/namespace.out.dir/namespace2.cpp.o -c /mnt/c/Users/황장원/Desktop/DataStructure/Ch0_C++_Study/01_C_to_C++/Namespace/namespace2.cpp",
+  "file": "/mnt/c/Users/황장원/Desktop/DataStructure/Ch0_C++_Study/01_C_to_C++/Namespace/namespace2.cpp"
+}
+]
