@@ -15,6 +15,11 @@ class Account {
             strcpy(this->Name, Name);
         }
 
+        Account(Account &copy) : ID(copy.ID), balance(copy.balance) {
+            Name = new char[strlen(Name) + 1];
+            strcpy(this->Name, copy.Name);
+        }
+
         void Account_Info() const {
             cout << "계좌 ID : " << ID << endl;
             cout << "이름 : " << Name << endl;
